@@ -25,7 +25,7 @@
 			$rslt = $mysqli->query($query);
 				
 			for($i = 0; $r = $rslt->fetch_object(); $i++) {
-				$matchingArtworkIds[$i] = array("likedPhoto" => $r->artwork_photo_id);
+				$matchingArtworkIds[$i] = $r->artwork_photo_id;
 			}
 		}
 		
